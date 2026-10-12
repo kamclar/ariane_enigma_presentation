@@ -470,7 +470,7 @@ window.ARIANE_CONTENTS.en = {
     {
       id: "literature",
       kicker: "Slide 11",
-      title: "Phase 2: evidence from literature",
+      title: "Phase 2: evidence from structured sources and literature",
       layout: "literature",
       left: [
         {
@@ -487,38 +487,35 @@ window.ARIANE_CONTENTS.en = {
         },
         {
           type: "callout",
-          heading: "Role of the language model",
-          text: "The model proposes candidate records with a quote and a location for every value. Criteria are assigned by the reviewer. The live classifier does not use a language model."
-        },
-        {
-          type: "callout",
-          heading: "Status",
-          text: "Preliminary design based on the Phase 1 forms, registries and source tables as implemented today. A pilot runs over the publications cited in ST3 and Table 9."
-        },
-        {
-          type: "callout",
-          heading: "Bottleneck",
-          text: "Automated access to full texts and supplements: of the 79 publications cited in ST3 and Table 9, 25 full texts are readable through open sources, 48 are available as an abstract only and 6 are not in PMC. The legal side (text and data mining under lawful access, licences for sending text to external services) is being settled with the library and does not block processing on our own hardware."
+          heading: "Access to full texts",
+          text: "Of the 79 publications cited in ST3 and Table 9, 25 full texts are readable through open sources, 48 are available as an abstract only and 6 are not in PMC. The legal side (text and data mining under lawful access, licences for sending text to external services) is being settled with the library and does not block processing on our own hardware."
         }
       ],
       right: [
         {
-          type: "flow",
-          heading: "Pipeline",
+          type: "list",
+          heading: "Step 1: structured sources",
           items: [
-            "Systematic surveillance of a defined literature corpus and per-variant retrieval, including an index over supplementary tables",
-            "AI-assisted extraction into candidate records in the schema of the existing review forms",
-            "Link to the exact passage, table or figure",
-            "Normalization of variant, transcript, assay and cohort",
-            "Detection of overlap and dependencies between studies",
-            "Expert review, then a versioned evidence release"
+            "MaveDB extends Table 9 with PS3 and BS3 results published later or not yet included in the specification.",
+            "ARIANE stores the calibration, URN, version, PMID, OddsPath and who calibrated.",
+            "The derived code stays switched off in the review form until the calibration of the whole dataset is approved.",
+            "Individual LRs from publications are stored as components of one PP4/BP5 calculation, so no evidence is counted twice."
+          ]
+        },
+        {
+          type: "list",
+          heading: "Step 2: literature",
+          items: [
+            "RNA, co-segregation, co-occurrence and case-control data, for which no complete structured source exists.",
+            "Extraction is first verified on the publications used in ENIGMA curations, where the expected per-variant evidence is known.",
+            "Then extended to further suitable studies from ClinVar, PubMed and their citations.",
+            "Output: prefilled review forms with citations and provenance. The final decision stays with the expert."
           ]
         }
       ],
       notes: [
         "The record schema comes from the ARIANE review forms: they define the fields each criterion requires. Phase 2 fills candidate records in those fields.",
-        "Approved records become a versioned registry, in the same way the ERepo RNA registry is used today.",
-        "Technical precedent: PubMind (Wang and Wang, Nature Communications 2026). The pipeline runs offline, separately from the classifier, with open models on our own hardware; no article text has to leave the institute.",
+        "Approved records become a versioned registry, in the same way the ERepo RNA registry is used today. The live classifier does not use a language model.",
         "A separate deck describes the design in detail."
       ]
     },
@@ -533,7 +530,7 @@ window.ARIANE_CONTENTS.en = {
           type: "numbered",
           items: [
             "An independent validation set and a curator to review the disagreements with us",
-            "Answers to the specification questions collected during implementation (sent separately)"
+            "Answers to the specification questions collected during implementation"
           ]
         }
       ],
