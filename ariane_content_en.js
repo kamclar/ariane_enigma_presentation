@@ -253,12 +253,12 @@ window.ARIANE_CONTENTS.en = {
             {
               label: "Manual",
               title: "Evidence entered by the expert",
-              variant: "BRCA1 c.5425G>T p.(Val1809Phe), PP1 form",
+              variant: "BRCA2 c.9364G>C p.(Ala3122Pro), PP1 form",
               items: [
-                "Automated result: PM2 Supporting, PS3 Strong from Table 9 (two calibrated studies), 5 points, Class 3",
-                "Reviewer enters the co-segregation LR of each family: 14.17 and 1.67 from two families (Goldgar 2005, PMID 15689452), and confirms their independence",
-                "ARIANE multiplies the components: 23.66, Strong (thresholds 2.08, 4.3, 18.7, 350)",
-                "Amended result: PP1 Strong, 9 points, Class 4. ENIGMA in ERepo: Likely Pathogenic with the same criteria"
+                "Automated result: PM2 Supporting, PS3 Strong from Table 9 (Richardson 2021), 5 points, Class 3",
+                "Reviewer enters the co-segregation LR 16.96 from two families, with a note and the ENIGMA assertion in ERepo as reference",
+                "ARIANE derives Moderate (thresholds 2.08, 4.3, 18.7, 350)",
+                "Amended result: PP1 Moderate, 7 points, Class 4. ENIGMA in ERepo: Likely Pathogenic with the same criteria"
               ],
               result: "Strength derived by ARIANE. No manual override."
             }
