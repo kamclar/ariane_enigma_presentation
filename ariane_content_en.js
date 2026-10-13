@@ -47,7 +47,7 @@ window.ARIANE_CONTENTS.en = {
       id: "what",
       kicker: "Slide 2",
       title: "What ARIANE is",
-      layout: "product",
+      layout: "standard",
       left: [
         {
           type: "paragraphs",
@@ -64,6 +64,8 @@ window.ARIANE_CONTENTS.en = {
             "Returns criteria, strengths, reasons, sources, warnings and the classification"
           ]
         },
+      ],
+      right: [
         {
           type: "keyValues",
           items: [
@@ -82,15 +84,6 @@ window.ARIANE_CONTENTS.en = {
           ]
         }
       ],
-      right: [
-        {
-          type: "media",
-          label: "ARIANE web application",
-          description: "Classification result with applied criteria, strengths, points and reasons.",
-          src: "images/ariane-result.png",
-          alt: "ARIANE result for BRCA1 c.5266dup: Class 5 with PVS1 Very Strong, PS3 Strong and PM5 PTC Strong"
-        }
-      ],
       notes: [
         "Why software: the rules branch by variant type, transcript context and available evidence, and the evidence sits in tables, supplementary files, registries and databases that change over time. A single PVS1 or PM2 decision can depend on the variant type, the Table 4 row, SpliceAI under the Appendix J profile, the gnomAD release and population, whether an RNA record exists for the exact variant, and which specification version was active. Each of these is a place where two curators can diverge.",
         "Each criterion in the result has a reason and a source, for example the Table 4 row or the Table 9 record used. The decision path can be expanded for each criterion.",
@@ -99,8 +92,21 @@ window.ARIANE_CONTENTS.en = {
     },
 
     {
-      id: "implementation",
+      id: "screenshot",
       kicker: "Slide 3",
+      layout: "image-only",
+      title: "ARIANE result for BRCA1 c.5266dup",
+      src: "images/ariane-result.png",
+      alt: "ARIANE web interface showing the result for BRCA1 c.5266dup: class 5, PVS1 Very Strong from Table 4, PS3 Strong from Table 9 and PM5 for the premature termination codon, each with its reason and decision path.",
+      notes: [
+        "The result for BRCA1 c.5266dup. Class 5, with PVS1 Very Strong from Table 4, PS3 Strong from Table 9 and PM5 for the premature termination codon. Each row has its reason, and the decision path can be opened.",
+        "ARIANE is in beta. Every result still needs expert review. When a rule needs something ARIANE does not have, the result says so. Missing evidence is never counted as evidence against."
+      ]
+    },
+
+    {
+      id: "implementation",
+      kicker: "Slide 4",
       title: "Implemented criteria",
       layout: "standard",
       left: [
@@ -144,7 +150,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "levels",
-      kicker: "Slide 4",
+      kicker: "Slide 5",
       title: "Three levels of automation",
       layout: "wide",
       blocks: [
@@ -207,7 +213,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "example",
-      kicker: "Slide 5",
+      kicker: "Slide 6",
       title: "Presentation of the ARIANE application",
       layout: "wide",
       blocks: [
@@ -247,12 +253,12 @@ window.ARIANE_CONTENTS.en = {
             {
               label: "Manual",
               title: "Evidence entered by the expert",
-              variant: "Same variant, PP1 form",
+              variant: "BRCA1 c.5425G>T p.(Val1809Phe), PP1 form",
               items: [
-                "Reviewer enters the co-segregation LR and its components",
-                "Supporting at LR 2.08, Moderate at 4.3, Strong at 18.7",
-                "Very Strong at 350 only with a demonstrated splicing or protein effect",
-                "Independence of components confirmed by the reviewer"
+                "Automated result: PM2 Supporting, PS3 Strong from Table 9 (two calibrated studies), 5 points, Class 3",
+                "Reviewer enters the co-segregation LR of each family: 14.17 and 1.67 from two families (Goldgar 2005, PMID 15689452), and confirms their independence",
+                "ARIANE multiplies the components: 23.66, Strong (thresholds 2.08, 4.3, 18.7, 350)",
+                "Amended result: PP1 Strong, 9 points, Class 4. ENIGMA in ERepo: Likely Pathogenic with the same criteria"
               ],
               result: "Strength derived by ARIANE. No manual override."
             }
@@ -278,7 +284,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "provenance",
-      kicker: "Slide 6",
+      kicker: "Slide 7",
       title: "Every classification has its provenance",
       layout: "standard",
       left: [
@@ -318,7 +324,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "updates",
-      kicker: "Slide 7",
+      kicker: "Slide 8",
       title: "System for updates of criteria and sources",
       layout: "standard",
       left: [
@@ -360,7 +366,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "architecture",
-      kicker: "Slide 8",
+      kicker: "Slide 9",
       title: "Architecture of the engine",
       layout: "standard",
       left: [
@@ -406,7 +412,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "genes",
-      kicker: "Slide 9",
+      kicker: "Slide 10",
       title: "Ready for other genes",
       layout: "standard",
       left: [
@@ -439,7 +445,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "validation",
-      kicker: "Slide 10",
+      kicker: "Slide 11",
       title: "What we lack: a validation set",
       layout: "standard",
       left: [
@@ -469,7 +475,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "literature",
-      kicker: "Slide 11",
+      kicker: "Slide 12",
       title: "Phase 2: evidence from structured sources and literature",
       layout: "literature",
       left: [
@@ -522,7 +528,7 @@ window.ARIANE_CONTENTS.en = {
 
     {
       id: "ask",
-      kicker: "Slide 12",
+      kicker: "Slide 13",
       title: "What we ask from ENIGMA",
       layout: "standard",
       left: [
